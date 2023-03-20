@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// import 'package:phoenix_ccs/camera.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:camera/camera.dart';
 
 class Emergency  extends StatelessWidget {
 
