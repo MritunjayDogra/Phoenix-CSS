@@ -6,7 +6,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-import 'package:camera/camera.dart';
 import 'package:phoenix_ccs/page.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:phoenix_ccs/addScr.dart';
