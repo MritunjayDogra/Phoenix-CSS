@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:news/signup.dart';
+import 'package:phoenix_ccs/signup.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'authHome.dart';
-import 'home.dart';
+import 'page.dart';
 import 'loginModel.dart';
+import 'main.dart';
 
 class SignInScreen extends StatefulWidget {
 
@@ -120,10 +121,10 @@ class _SignInScreenState extends State<SignInScreen> {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/images/cactus.jpg'), fit: BoxFit.cover),
-        ),
+        // decoration: BoxDecoration(
+        //   image: DecorationImage(
+        //       image: AssetImage('assets/images/cactus.jpg'), fit: BoxFit.cover),
+        // ),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -226,7 +227,7 @@ class _SignInScreenState extends State<SignInScreen> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      Home()));
+                                                      threeOptionsScreen()));
                                         }
                                       }
                                 },

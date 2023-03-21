@@ -2,12 +2,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:news/otp.dart';
-import 'package:news/signin.dart';
+// import 'package:news/otp.dart';
+import 'package:phoenix_ccs/signin.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'authHome.dart';
-import 'home.dart';
+import 'main.dart';
 import 'loginModel.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -49,7 +49,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 context,
                 MaterialPageRoute(
                     builder: (context) =>
-                        Home()));
+                        threeOptionsScreen()));
           }
         }
       },
@@ -59,10 +59,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/images/cactus.jpg'), fit: BoxFit.cover),
-        ),
+        // decoration: BoxDecoration(
+        //   image: DecorationImage(
+        //       image: AssetImage('assets/images/cactus.jpg'), fit: BoxFit.cover),
+        // ),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

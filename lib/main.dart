@@ -1,5 +1,8 @@
 // import 'package:floating_action_bubble/floating_action_bubble.dart';
+import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -7,11 +10,27 @@ import 'package:camera/camera.dart';
 import 'package:phoenix_ccs/page.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:phoenix_ccs/addScr.dart';
-void main()  {
+import 'package:phoenix_ccs/authHome.dart';
+import 'package:simple_shadow/simple_shadow.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:phoenix_ccs/signin.dart';
+import 'package:phoenix_ccs/signup.dart';
 
-  runApp( myApp());
+
+var email;
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp();
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  email = prefs.getString('email');
+  print(email);
+  runApp( const myApp());
 }
+
 class myApp extends StatelessWidget{
+  const myApp({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +49,7 @@ class myApp extends StatelessWidget{
 
       ),
 
-      home: threeOptionsScreen(),
+      home: AuthHomeScreen(),// : threeOptionsScreen(),
     );
 
   }
@@ -106,7 +125,7 @@ class _threeOptionsScreenState extends State<threeOptionsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('phoenix_CSC'),
+          title: Text('Phoenix CCS'),
         ),
         backgroundColor: Colors.black,
         body: Center(
@@ -238,3 +257,102 @@ class _threeOptionsScreenState extends State<threeOptionsScreen> {
     );
   }
 }
+
+
+
+class AuthHomeScreen extends StatelessWidget {
+  const AuthHomeScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        width: double.infinity,
+
+        // decoration: BoxDecoration(
+        //
+        //
+        //   // image: DecorationImage(
+        //   //     image: AssetImage('assets/images/newspaper.jpg'),
+        //   //     fit: BoxFit.cover),
+        // ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                  padding: EdgeInsets.all(76),
+                  decoration: BoxDecoration(
+                    // color: Colors.black54,
+                    // image: DecorationImage(
+                    //     image: AssetImage('assets/images/newspaper.jpg'),
+                    //     fit: BoxFit.contain),
+
+                    borderRadius: BorderRadius.circular(
+                        18),
+                  ),
+
+
+                  margin: EdgeInsets.symmetric(horizontal: 5),
+                  child: Column(
+                    children: [
+                      // SimpleShadow(
+                      //
+                      //   child: Image.asset('assets/images/logoS.png',color: Colors.white,),
+                      //   color: Colors.black,
+                      //   opacity: 1,
+                      // ),
+                      BorderedText(
+                        strokeWidth: 2,
+                        child:Text('CCS' ,style: TextStyle(fontFamily: 'Darker',fontSize: 54,fontWeight: FontWeight.bold),),),
+                    ],
+                  )),
+              Column(
+                children: [
+
+
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  SignInScreen()));
+                    },
+
+                    style: ElevatedButton.styleFrom(
+                        elevation: 18,
+                        padding:
+                        EdgeInsets.symmetric(horizontal: 75.0, vertical: 10.0),
+                        backgroundColor: Colors.black54,
+                        shape: StadiumBorder(side: BorderSide(width: 2,color: Colors.white))
+                    ),
+                    child: Text('Sign in',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold)),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  SignUpScreen()));},
+                    style: ElevatedButton.styleFrom(
+                        elevation: 18,
+                        padding:
+                        EdgeInsets.symmetric(horizontal: 75.0, vertical: 10.0),
+                        backgroundColor: Colors.white70,
+                        shape: StadiumBorder(side: BorderSide(width: 2))
+                    ),
+                    child: Text('Sign up',style: TextStyle(color: Colors.black,fontSize: 16,fontWeight: FontWeight.bold),),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+

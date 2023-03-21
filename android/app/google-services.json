@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "645233644037",
+    "project_id": "phoenix-ccs-hackthon",
+    "storage_bucket": "phoenix-ccs-hackthon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645233644037:android:5b6916cd62abe69c96826c",
+        "android_client_info": {
+          "package_name": "com.example.pheonix_ccs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645233644037-0ektbg026vlchiod7b5lj74sqk1p7f2o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAT_kzY-wuo2W-9Z1px5eufknPiMkcIXh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645233644037-0ektbg026vlchiod7b5lj74sqk1p7f2o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "645233644037-ql6eql8ht7e3gbn0o8keviskktenjgta.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.pheonixCcs"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645233644037:android:336c8c6cb929ae2496826c",
+        "android_client_info": {
+          "package_name": "com.example.phoenix_ccs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645233644037-0ektbg026vlchiod7b5lj74sqk1p7f2o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAT_kzY-wuo2W-9Z1px5eufknPiMkcIXh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645233644037-0ektbg026vlchiod7b5lj74sqk1p7f2o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "645233644037-ql6eql8ht7e3gbn0o8keviskktenjgta.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.pheonixCcs"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

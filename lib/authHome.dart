@@ -1,8 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:news/main.dart';
 import 'firebaseuser.dart';
 import 'loginModel.dart';
-import './userModel.dart';
+// import './userModel.dart';
 
 
 
