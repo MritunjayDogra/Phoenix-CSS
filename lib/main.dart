@@ -240,6 +240,7 @@ class _threeOptionsScreenState extends State<threeOptionsScreen> {
             selectedItemColor: Colors.white,
             unselectedItemColor: Colors.grey,
             onTap: _onItemTapped,
+            currentIndex: _selectedIndex,
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
 
